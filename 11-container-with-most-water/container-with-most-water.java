@@ -1,6 +1,6 @@
 class Solution {
     public int maxArea(int[] height) {
-        int maxWater  = Integer.MIN_VALUE;
+        int maxWater  = 0;
         int i = 0;
         int j = height.length - 1;
 
