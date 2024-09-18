@@ -5,7 +5,7 @@ class Solution {
         for(int i = 0; i<nums.length; i++){
             if(i > currMaxPossibleIndex){
                 return false;
-            }else if (i + nums[i] > currMaxPossibleIndex && i <= currMaxPossibleIndex){
+            }else if (i + nums[i] > currMaxPossibleIndex){
                 currMaxPossibleIndex = i + nums[i];
             } 
         }
