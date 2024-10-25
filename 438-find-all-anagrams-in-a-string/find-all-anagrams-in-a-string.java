@@ -26,10 +26,10 @@ class Solution {
         int left = 0;
 
         while (right < s.length()) {
-            freq_s[s.charAt(right) - 'a']++; // Dec the freq of new char
-            freq_s[s.charAt(left) - 'a']--; // Inc the freq of prev char
+            freq_s[s.charAt(right) - 'a']++; // Inc the freq of new char
+            freq_s[s.charAt(left) - 'a']--; // Dec the freq of prev char
             if (isSame(freq_p, freq_s)) {
-                res.add(left + 1);
+                res.add(right - p.length() + 1);
             }
             // Move both the pointers
             right++;
