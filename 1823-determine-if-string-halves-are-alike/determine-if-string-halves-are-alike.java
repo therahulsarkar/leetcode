@@ -19,4 +19,3 @@ public class Solution {
         return vowelsCount == 0;
     }
 }
-
