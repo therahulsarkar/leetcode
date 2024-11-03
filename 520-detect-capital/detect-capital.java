@@ -1,19 +1,19 @@
 class Solution {
-    private boolean check(String word, char start, char end){
-        for(char ch : word.toCharArray()){
-            if(ch < start || ch > end){
-                return false;
+   
+    public boolean detectCapitalUse(String word) {
+        int uppercase = 0;
+
+        for (char ch : word.toCharArray()) {
+            if (ch < 'a' || ch > 'z') {
+                uppercase++;
             }
         }
-        return true;
-    }
-    public boolean detectCapitalUse(String word) {
-        
-            if(check(word, 'a', 'z') || check(word, 'A', 'Z') || check(word.substring(1), 'a', 'z')){
-                return true;
-            }else{
-                return false;
-            }
-        
+
+        if (uppercase == word.length() || uppercase == 0 || (uppercase == 1 && (word.charAt(0) < 'a' || word.charAt(0) > 'z'))) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }
